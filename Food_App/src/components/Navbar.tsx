@@ -10,7 +10,13 @@ import SearchIcon from "@mui/icons-material/Search";
 
 function Navbar() {
   return (
-    <AppBar position="static">
+    <AppBar
+      position="static"
+      sx={{
+        backgroundColor: "error.main",
+        borderRadius: "4px",
+      }}
+    >
       <Toolbar>
         <Typography variant="h6" sx={{ flexGrow: 1, marginRight: "40%" }}>
           Food Delivery App
