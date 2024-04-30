@@ -1,3 +1,8 @@
+Preset Auth : 
+Email : xyz@gmail.com
+Password : Xyz@123
+....
+
 Steps for intallation : 
 1] Download zip and extract the files 
 2] Navigate to project folder (Food_App) on ide
