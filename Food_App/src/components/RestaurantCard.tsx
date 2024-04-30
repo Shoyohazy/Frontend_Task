@@ -1,3 +1,4 @@
+import { restaurantProfile } from "../constants/Dishes";
 import {
   Typography,
   Card,
@@ -12,13 +13,13 @@ function RestaurantCard({
   areaName,
   avgRating,
 }) {
-  const restaurantProfile =
-    "https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,h_600/";
+  //   const restaurantProfile =
+  //     "https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,h_600/";
   console.log(name);
 
   return (
-    <div>
-      <Card>
+    <>
+      <Card sx={{ maxHeight: "140" }}>
         <CardMedia
           component="img"
           image={restaurantProfile + cloudinaryImageId}
@@ -26,7 +27,9 @@ function RestaurantCard({
           height="140"
         />
         <CardContent>
-          <Typography variant="h6">{name}</Typography>
+          <Typography variant="body1" sx={{ fontWeight: "700" }}>
+            {name}
+          </Typography>
           <Typography variant="body2" sx={{ marginTop: "3%" }}>
             {areaName}
           </Typography>
@@ -46,7 +49,7 @@ function RestaurantCard({
           />
         </CardContent>
       </Card>
-    </div>
+    </>
   );
 }
 

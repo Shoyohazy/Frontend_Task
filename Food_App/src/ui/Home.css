@@ -1,0 +1,9 @@
+.dish-container {
+  display: flex;
+  margin-left: 5%;
+  border-bottom: 1px solid rgb(203, 200, 200);
+}
+
+.dishes-heading {
+  color: black;
+}

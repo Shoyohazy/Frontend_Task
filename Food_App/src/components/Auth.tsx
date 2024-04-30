@@ -13,7 +13,7 @@ const Auth: React.FC = () => {
   const Navigate = useNavigate();
   //Preset passwords
   const presetEmail = "xyz@gmail.com";
-  const presetPassword = "xyz@123";
+  const presetPassword = "Xyz@123";
 
   // Validation
   const validateEmail = (email: string): boolean => {

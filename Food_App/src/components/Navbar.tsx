@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import {
   AppBar,
   Toolbar,
@@ -6,6 +7,7 @@ import {
   IconButton,
   Box,
 } from "@mui/material";
+import ShoppingCartIcon from "@mui/icons-material/ShoppingCart";
 import SearchIcon from "@mui/icons-material/Search";
 
 function Navbar() {
@@ -21,6 +23,10 @@ function Navbar() {
         <Typography variant="h6" sx={{ flexGrow: 1, marginRight: "40%" }}>
           Food Delivery App
         </Typography>
+        <Typography variant="h6" sx={{ flexGrow: 1 }}>
+          <Link to="/home">Restaurants</Link>
+        </Typography>
+
         <Box sx={{ display: "flex", alignItems: "center" }}>
           <InputBase
             placeholder="Search..."
@@ -32,6 +38,9 @@ function Navbar() {
           />
           <IconButton color="inherit">
             <SearchIcon />
+          </IconButton>
+          <IconButton color="inherit" component={Link} to="/cart">
+            <ShoppingCartIcon />
           </IconButton>
         </Box>
       </Toolbar>
