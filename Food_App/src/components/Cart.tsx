@@ -7,6 +7,7 @@ import {
   Button,
   Grid,
 } from "@mui/material";
+import Logo from "../assets/cartEmpty.png";
 import { useDispatch, useSelector } from "react-redux";
 import { addCartItem, removeCartItem } from "../features/cartSlice";
 
@@ -25,6 +26,14 @@ function Cart() {
     const dispatchItem = cartItems.find((item) => item.id == id);
     dispatch(addCartItem(dispatchItem));
   };
+
+  if (cartItems.length === 0) {
+    return (
+      <Box sx={{ display: "flex", justifyContent: "center", marginTop: "10%" }}>
+        <img src={Logo} alt="empty cart" />
+      </Box>
+    );
+  }
 
   return (
     <Box>

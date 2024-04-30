@@ -58,7 +58,7 @@ const Auth: React.FC = () => {
         justifyContent="center"
         minHeight="100vh"
       >
-        <Typography variant="h4" gutterBottom>
+        <Typography variant="h4" color="textPrimary" gutterBottom>
           Login
         </Typography>
         <TextField

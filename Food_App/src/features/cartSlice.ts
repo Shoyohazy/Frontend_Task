@@ -1,13 +1,5 @@
 import { createSlice } from "@reduxjs/toolkit";
-import { Dishes } from "../constants/Dishes";
-interface CartItem {
-  id: string;
-  name: string;
-  image: string;
-  price: number;
-  totalPrice: number;
-  quantity: number;
-}
+import { CartItem } from "../types";
 
 // Define the initial state of the cart
 interface CartState {
@@ -66,9 +58,3 @@ const cartSlice = createSlice({
 
 export const { addCartItem, removeCartItem } = cartSlice.actions;
 export default cartSlice.reducer;
-// id: newItem.id,
-//           quantity: 1,
-//           price: newItem.price,
-//           totalPrice: newItem.price,
-//           name: newItem.title,
-//           image: newItem.image,
